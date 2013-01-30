@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="DRAViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkb-mv-2W1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="0su-bf-CcO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BFN-m1-8KK" id="8BO-Z5-mp5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpV-GW-9q7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="Njl-Xg-01E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFN-m1-8KK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="gij-sT-6qw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Insert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addStartDate:" destination="2" eventType="touchDown" id="vX9-eH-Xpe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBX-x3-1SR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addEndDate:" destination="2" eventType="touchDown" id="8w6-tX-x5M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nBX-x3-1SR" firstAttribute="leading" secondItem="dpV-GW-9q7" secondAttribute="leading" type="default" id="04m-PX-neV"/>
+                            <constraint firstItem="pkb-mv-2W1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9TV-rw-PyV"/>
+                            <constraint firstItem="pkb-mv-2W1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Td1-Rb-fat"/>
+                            <constraint firstItem="BFN-m1-8KK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="89" id="XJd-sL-aTb"/>
+                            <constraint firstItem="nBX-x3-1SR" firstAttribute="top" secondItem="BFN-m1-8KK" secondAttribute="top" type="default" id="agx-35-tAQ"/>
+                            <constraint firstItem="BFN-m1-8KK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bca-bw-X04"/>
+                            <constraint firstAttribute="trailing" secondItem="nBX-x3-1SR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cpH-zj-ZR6"/>
+                            <constraint firstItem="dpV-GW-9q7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eGS-If-Pzt"/>
+                            <constraint firstItem="BFN-m1-8KK" firstAttribute="trailing" secondItem="pkb-mv-2W1" secondAttribute="trailing" type="default" id="g7o-cT-JpR"/>
+                            <constraint firstAttribute="trailing" secondItem="dpV-GW-9q7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tWG-UW-Rzo"/>
+                            <constraint firstItem="nBX-x3-1SR" firstAttribute="bottom" secondItem="BFN-m1-8KK" secondAttribute="bottom" type="default" id="uyW-Nc-3s1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editEndDate" destination="dpV-GW-9q7" id="xQ6-Yy-wEg"/>
+                        <outlet property="editStartDate" destination="pkb-mv-2W1" id="Kra-lA-TzZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
